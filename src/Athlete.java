@@ -6,4 +6,6 @@ public class Athlete {
         name = n;
         event = e;
     }
+    public String getEvent(){ return event;}
+    public String getName(){ return name;}
 }
