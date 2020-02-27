@@ -7,13 +7,16 @@ public class AthleteTester {
     public static Field[] JavThrowers;
     public static Field[] HammerThrowers;
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Scanner xyz = new Scanner(System.in);   //bug with entering athletes
+        Scanner sc = new Scanner(System.in);    //int
+        Scanner xyz = new Scanner(System.in);   //strings
 
         /**
          * SECTION FOR ENTERING EVENTS
          */
 
+        /**
+         * could make much shorter by having each section as a method by passing a type? just a thought
+         */
         while (true) {
             System.out.print("What are you entering? Field, Distance or Sprints? : ");
             String input = xyz.nextLine();
@@ -87,7 +90,7 @@ public class AthleteTester {
                 if (sp.equals("SHOT PUT") || sp.equals("SHOTPUT")){
                     System.out.print("How many rounds of throws? : ");
                     x = sc.nextInt();
-                    for(int j = 0; j < x; j++) {
+                    for(int j = 0; j < x; j++) {    //number of rounds of throws
                         System.out.println("ROUND " + (j+1));
                         for (Field shotThrower : ShotThrowers) {
                             System.out.println(shotThrower.Throw());
