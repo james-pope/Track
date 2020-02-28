@@ -33,6 +33,7 @@ public class Field extends Athlete {
         }
     }
     public String jump(){
+        event = event.toUpperCase();
         if (event.equals("HIGH JUMP")){
             height = (int)(Math.random()*(84-60) + 1) + 60;
         }

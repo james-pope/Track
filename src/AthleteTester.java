@@ -115,14 +115,19 @@ public class AthleteTester {
                     }
                 }
             }
-            if(input.equals("SPRINTS")){
-                System.out.print("How many athletes? : ");
-                numAthletes = sc.nextInt();
-                oneHundred = new Sprints[numAthletes];
-                for(int i = 0; i < oneHundred.length; i++){
-                    System.out.print("Sprinter " + (i+1) + " name: ");
-                    String thr = xyz.nextLine();
-                    oneHundred[i] = new Sprints(thr, "100m");
+            if(input.equals("SPRINTS")) {
+                System.out.print("What event? (Format: 100m) : ");
+                input = xyz.nextLine();
+                input = input.toUpperCase();
+                if (input.equals("100M")) {
+                    System.out.print("How many athletes? : ");
+                    numAthletes = sc.nextInt();
+                    oneHundred = new Sprints[numAthletes];
+                    for (int i = 0; i < oneHundred.length; i++) {
+                        System.out.print("Sprinter " + (i + 1) + " name: ");
+                        String thr = xyz.nextLine();
+                        oneHundred[i] = new Sprints(thr, "100m");
+                    }
                 }
             }
             System.out.print("Any other events you would like to enter? : ");
