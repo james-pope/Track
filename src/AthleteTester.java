@@ -14,6 +14,7 @@ public class AthleteTester {
     public static Sprints[] oneHundred;
     public static Sprints[] twoHundred;
     public static Sprints[] fourHundred;
+    public static Sprints[] sixHundred;
     public static Sprints[] eightHundred;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);    //int
@@ -129,6 +130,46 @@ public class AthleteTester {
                         oneHundred[i] = new Sprints(thr, "100m");
                     }
                 }
+                if (input.equals("200M")) {
+                    System.out.print("How many athletes? : ");
+                    numAthletes = sc.nextInt();
+                    twoHundred = new Sprints[numAthletes];
+                    for (int i = 0; i < twoHundred.length; i++) {
+                        System.out.print("Sprinter " + (i + 1) + " name: ");
+                        String thr = xyz.nextLine();
+                        twoHundred[i] = new Sprints(thr, "200m");
+                    }
+                }
+                if (input.equals("400M")) {
+                    System.out.print("How many athletes? : ");
+                    numAthletes = sc.nextInt();
+                    fourHundred = new Sprints[numAthletes];
+                    for (int i = 0; i < fourHundred.length; i++) {
+                        System.out.print("Sprinter " + (i + 1) + " name: ");
+                        String thr = xyz.nextLine();
+                        fourHundred[i] = new Sprints(thr, "400m");
+                    }
+                }
+                if (input.equals("600M")) {
+                    System.out.print("How many athletes? : ");
+                    numAthletes = sc.nextInt();
+                    sixHundred = new Sprints[numAthletes];
+                    for (int i = 0; i < sixHundred.length; i++) {
+                        System.out.print("Sprinter " + (i + 1) + " name: ");
+                        String thr = xyz.nextLine();
+                        sixHundred[i] = new Sprints(thr, "600m");
+                    }
+                }
+                if (input.equals("800M")) {
+                    System.out.print("How many athletes? : ");
+                    numAthletes = sc.nextInt();
+                    eightHundred = new Sprints[numAthletes];
+                    for (int i = 0; i < eightHundred.length; i++) {
+                        System.out.print("Sprinter " + (i + 1) + " name: ");
+                        String thr = xyz.nextLine();
+                        eightHundred[i] = new Sprints(thr, "800m");
+                    }
+                }
             }
             System.out.print("Any other events you would like to enter? : ");
             String y = xyz.nextLine();
@@ -238,6 +279,26 @@ public class AthleteTester {
                 sp = sp.toUpperCase();
                 if(sp.equals("100M")){
                     for (Sprints sprints : oneHundred) {
+                        System.out.println(sprints.race());
+                    }
+                }
+                if(sp.equals("200M")){
+                    for (Sprints sprints : twoHundred) {
+                        System.out.println(sprints.race());
+                    }
+                }
+                if(sp.equals("400M")){
+                    for (Sprints sprints : fourHundred) {
+                        System.out.println(sprints.race());
+                    }
+                }
+                if(sp.equals("600M")){
+                    for (Sprints sprints : sixHundred) {
+                        System.out.println(sprints.race());
+                    }
+                }
+                if(sp.equals("800M")){
+                    for (Sprints sprints : eightHundred) {
                         System.out.println(sprints.race());
                     }
                 }
