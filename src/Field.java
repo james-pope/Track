@@ -1,5 +1,6 @@
 public class Field extends Athlete {
     public int distance;
+    public int height;
     public String event;
     public int points;
     public Field(String name, String e){
@@ -30,5 +31,20 @@ public class Field extends Athlete {
         } else{
             return getName() + " fouled";
         }
+    }
+    public String jump(){
+        if (event.equals("HIGH JUMP")){
+            height = (int)(Math.random()*(84-60) + 1) + 60;
+        }
+        if (event.equals("LONG JUMP")){
+            height = (int)(Math.random()*(300-180) + 1) + 180;
+        }
+        if (event.equals("TRIPLE JUMP")){
+            height = (int)(Math.random()*(600-420)+1)+420;
+        }
+        if (event.equals("POLE VAULT")){
+            height = (int)(Math.random()*(240-120)+1)+120;
+        }
+        return getName() + " jumped " + height/12 + "'" + height%12 +"''" + " in the " + getEvent() + "!";
     }
 }

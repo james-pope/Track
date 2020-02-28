@@ -2,6 +2,7 @@ public class Athlete {
     private String name;
     private String event;
     private String prev;
+
     public Athlete(String n, String e){
         name = n;
         event = e;
